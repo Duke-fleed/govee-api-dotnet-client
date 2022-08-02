@@ -10,6 +10,18 @@ The Govee API .NET client is a lightweight class library to consume Govee develo
 * .NET 6
 * C# language version - 10.0+
 
+### Installation
+
+Install via NuGet:
+
+```
+// Package Manager
+Install-Package GoveeApiClient
+
+// .Net CLI
+dotnet add package GoveeApiClient
+```
+
 ### Usage examples
 
 Instantiate a client
