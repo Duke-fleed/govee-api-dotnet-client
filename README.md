@@ -2,7 +2,8 @@
 
 The Govee API .NET client is a lightweight class library to consume Govee developer API V1.8. It provides common services for making API requests.
 
-![workflow](https://github.com/Duke-fleed/govee-api-dotnet-client/actions/workflows/package.yml/badge.svg)
+![workflow(https://github.com/Duke-fleed/govee-api-dotnet-client/actions/workflows/package.yml/badge.svg?cacheSeconds=50)](https://github.com/Duke-fleed/govee-api-dotnet-client/actions/workflows/package.yml)
+[![Nuget](https://img.shields.io/nuget/v/GoveeApiClient?cacheSeconds=50)](https://www.nuget.org/packages/GoveeApiClient/)
 
 ### Requirements
 
