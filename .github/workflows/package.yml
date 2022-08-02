@@ -25,6 +25,7 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --verbosity normal
       - name: Create the package
-        run: dotnet pack --configuration Release
+        run: dotnet pack --configuration Release -p:PackageVersion=1.${{ github.run_number }}.0
       - name: Push package to Nuget gallery
         run: dotnet nuget push src/GoveeApiClientNet/bin/Release/*.nupkg --api-key ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
+ 
