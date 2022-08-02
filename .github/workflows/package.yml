@@ -1,4 +1,4 @@
-name: dotnet package
+name: build and publish
 
 on: [push]
 
@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
-          source-url: https://api.nuget.org/v3/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOKEN}}
       - name: Install dependencies
@@ -28,4 +27,4 @@ jobs:
       - name: Create the package
         run: dotnet pack --configuration Release
       - name: Push package to Nuget gallery
-        run: dotnet nuget push src/GoveeApiClientNet/bin/Release/*.nupkg
+        run: dotnet nuget push src/GoveeApiClientNet/bin/Release/*.nupkg --api-key ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
